@@ -210,8 +210,8 @@ Avant de commencer, assurez-vous d'avoir les éléments suivants :
 1. **Cloner le dépôt :**
 
    ```shell
-   git clone https://github.com/DataScientest/Project-GitOps.git
-   cd Reddit-Project/Jenkins-Server-TF/
+   git clone https://github.com/DataScientest/Project-datascientest-eks-argo-GitOps_FR.git
+   cd Livrables/Jenkins-Server-TF/
    ```
 
 2. **Modifier le fichier `backend.tf` :**
@@ -439,7 +439,7 @@ Avant de commencer, assurez-vous d'avoir les éléments suivants :
    - Si  vous utilisez Github Actions à la place de Jenkins , vous pouvez utiliser le workfow suivant pour la pipeline :
 
      ```shell
-     name: fall-project create AWS and EKS infra with Terraform
+     name: fallLivrables create AWS and EKS infra with Terraform
      
      on:
        push:
@@ -688,7 +688,7 @@ Avant de commencer, assurez-vous d'avoir les éléments suivants :
    ```shell
    project: default
    source:
-     repoURL: 'https://github.com/DataScientest/Project-GitOps.git'
+     repoURL: 'https://github.com/DataScientest/Project-datascientest-eks-argo-GitOps_FR.git'
      path: K8s/
      targetRevision: HEAD
    destination:
