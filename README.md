@@ -210,8 +210,8 @@ Avant de commencer, assurez-vous d'avoir les éléments suivants :
 1. **Cloner le dépôt :**
 
    ```shell
-   git clone https://github.com/DataScientest/Project-GitOps.git
-   cd Reddit-Project/Jenkins-Server-TF/
+   git clone https://github.com/DataScientest/Project-GitOps.git](https://github.com/DataScientest/Project-datascientest-eks-argo-GitOps_FR.git
+   cd Livrables/Jenkins-Server-TF/
    ```
 
 2. **Modifier le fichier `backend.tf` :**
