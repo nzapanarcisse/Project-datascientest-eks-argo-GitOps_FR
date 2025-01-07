@@ -1,4 +1,4 @@
-# Context de Projet DevOps Datascientest
+# Contexte de Projet DevOps Datascientest
 
 
 
