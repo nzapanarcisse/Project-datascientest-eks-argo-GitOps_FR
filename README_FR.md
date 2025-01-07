@@ -300,9 +300,11 @@ Avant de commencer, assurez-vous d'avoir les éléments suivants :
 
 6. **Obtenir le mot de passe Jenkins :**
 
-              ```shell
-              cat /var/jenkins_home/secrets/initialadminpassword
-              ```
+   ```shell
+   cat /var/jenkins_home/secrets/initialadminpassword
+   ```
+
+   
 
    - Connectez-vous à l'instance , récupérez le mot de passe , et installez les plugins recommandés .
 
