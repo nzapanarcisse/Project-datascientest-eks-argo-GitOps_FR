@@ -30,7 +30,7 @@ terraform init -upgrade
         stage('Validate Terraform Code') {
             steps {
                 withAWS(credentials: 'aws-key', region: 'us-east-1') {
-                dir('EKS-TF') {
+                dir('Livrables/EKS-TF/') {
                     script {
                         sh 'terraform validate'
                     }
@@ -41,7 +41,7 @@ terraform init -upgrade
         stage('Terraform Plan') {
             steps {
                 withAWS(credentials: 'aws-key', region: 'us-east-1') {
-                dir('EKS-TF') {
+                dir('Livrables/EKS-TF/') {
                     script {
                         sh "terraform plan"
                     }
@@ -54,7 +54,7 @@ terraform init -upgrade
                 withAWS(credentials: 'aws-key', region: 'us-east-1') { 
                 script {
                     echo "${params.'Terraform-Action'}"
-                    dir('EKS-TF') {
+                    dir('Livrables/EKS-TF/') {
                         script {
                             if (params.'Terraform-Action' == 'apply') {
                                /* sh "terraform apply -auto-approve -var-file=${params.'File-Name'}"*/
