@@ -8,11 +8,11 @@ properties([
 pipeline {
     agent any
     stages {
-        stage('Checkout from Git') {
-           /* steps {
+        /*stage('Checkout from Git') {
+            steps {
                 git branch: 'master', url: 'https://github.com/nzapanarcisse/Project-datascientest-eks-argo-GitOps_FR.git'
-            }*/
-        }
+            }
+        }*/
         stage('Initializing Terraform') {
             steps {
                 withAWS(credentials: 'aws-key', region: 'us-east-1') {
