@@ -43,7 +43,7 @@ terraform init -upgrade
                 withAWS(credentials: 'aws-key', region: 'us-east-1') {
                 dir('Livrables/EKS-TF/') {
                     script {
-                        sh "terraform plan"
+                        sh "terraform plan -var-file=${params.'File-Name'}"
                     }
                 }
                 }
@@ -57,11 +57,9 @@ terraform init -upgrade
                     dir('Livrables/EKS-TF/') {
                         script {
                             if (params.'Terraform-Action' == 'apply') {
-                               /* sh "terraform apply -auto-approve -var-file=${params.'File-Name'}"*/
-                                sh "terraform apply -auto-approve"
+                                sh "terraform apply -auto-approve -var-file=${params.'File-Name'}"
                             } else if (params.'Terraform-Action' == 'destroy') {
-                              /*  sh "terraform destroy -auto-approve -var-file=${params.'File-Name'}"*/
-                                sh "terraform destroy -auto-approve"
+                                sh "terraform destroy -auto-approve -var-file=${params.'File-Name'}"
                             } else {
                                 error "Invalid value for Terraform-Action: ${params.'Terraform-Action'}"
                             }
