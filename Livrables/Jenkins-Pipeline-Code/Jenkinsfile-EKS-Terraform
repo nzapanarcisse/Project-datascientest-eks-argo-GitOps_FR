@@ -19,6 +19,7 @@ pipeline {
                 dir('EKS-TF') {
                     script {
                         sh '''
+ls
 cd Livrables/EKS-TF/
 terraform init
 '''
