@@ -1,0 +1,12 @@
+namespace= "fall-project"
+instance_type_bastion= "t2.micro"
+ami_type= "AL2_x86_64"
+instance_type= "fall-project"
+instance_number= 2
+region= "us-east-1"
+profile= "dev"
+cluster_name= "fall-project-cluster"
+fall-project_repo= "git@github.com:CashNowMobile/fall-project-k8s.git"
+root_domain_name= "olivierrey.cloudns.ph"
+GIT_SECRET_KEY="sese"
+GRAFANA_PWD="grafana"
