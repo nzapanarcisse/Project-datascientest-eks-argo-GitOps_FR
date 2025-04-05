@@ -42,9 +42,24 @@ provider "kubectl" {
   }
 }
 
-terraform {
-  cloud {
+resource "aws_s3_bucket" "tfstate" {
+  bucket        = "terraform-cluster-demo02" # Remplacez par un nom unique
+  acl           = "private"
+
+  tags = {
+    Name        = "example-s3-bucket"
+    Environment = "Dev"
   }
+}
+
+terraform {
+  backend "s3" {
+    bucket                  = "terraform-cluster-demo02"
+    key                     = "Lepro-dev.tfstate"
+    region                  = "us-east-1"
+  }
+ /* cloud {
+  }*/
   required_providers {
     aws = {
       source  = "hashicorp/aws"
