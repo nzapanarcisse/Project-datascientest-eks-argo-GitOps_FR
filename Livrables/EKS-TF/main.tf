@@ -105,20 +105,20 @@ module "eks" {
 #  profile = var.profile
 #}
 
-#module "prometheus" {
-#  source      = "./modules/prometheus"
-#  grafana_pwd = var.GRAFANA_PWD
-#  profile = var.profile
-#  namespace           = var.namespace
-#  root_domain_name = var.root_domain_name
-#}
+module "prometheus" {
+  source      = "./modules/prometheus"
+  grafana_pwd = var.GRAFANA_PWD
+  profile = var.profile
+  namespace           = var.namespace
+  root_domain_name = var.root_domain_name
+}
 
-#module "velero" {
-#  source       = "./modules/velero"
-#  cluster_name = var.cluster_name
-#  region = var.region
-#  cluster_oidc_issuer_url = module.eks.cluster_oidc_issuer_url
-#}
+module "velero" {
+  source       = "./modules/velero"
+  cluster_name = var.cluster_name
+  region = var.region
+  cluster_oidc_issuer_url = module.eks.cluster_oidc_issuer_url
+}
 
 module "cert_manager" {
   source       = "./modules/cert_manager"
