@@ -106,20 +106,20 @@ module "eks" {
   eks_admins_iam_role = module.eks.eks_admins_iam_role
 }
 
-module "argocd" {
-  source                = "./modules/argocd"
-  fall-project_repo            = var.fall-project_repo
-  fall-project_repo_secret_key = var.GIT_SECRET_KEY
-  profile = var.profile
-}
+#module "argocd" {
+#  source                = "./modules/argocd"
+#  fall-project_repo            = var.fall-project_repo
+#  fall-project_repo_secret_key = var.GIT_SECRET_KEY
+#  profile = var.profile
+#}
 
-module "prometheus" {
-  source      = "./modules/prometheus"
-  grafana_pwd = var.GRAFANA_PWD
-  profile = var.profile
-  namespace           = var.namespace
-  root_domain_name = var.root_domain_name
-}
+#module "prometheus" {
+#  source      = "./modules/prometheus"
+#  grafana_pwd = var.GRAFANA_PWD
+#  profile = var.profile
+#  namespace           = var.namespace
+#  root_domain_name = var.root_domain_name
+#}
 
 #module "velero" {
 #  source       = "./modules/velero"
@@ -128,17 +128,17 @@ module "prometheus" {
 #  cluster_oidc_issuer_url = module.eks.cluster_oidc_issuer_url
 #}
 
-module "cert_manager" {
-  source       = "./modules/cert_manager"
-  profile = var.profile
-}
+#module "cert_manager" {
+#  source       = "./modules/cert_manager"
+#  profile = var.profile
+#}
 
-module "ingress" {
-  source      = "./modules/ingress"
-  profile = var.profile
-  namespace           = var.namespace
-  root_domain_name = var.root_domain_name
-}
+#module "ingress" {
+#  source      = "./modules/ingress"
+#  profile = var.profile
+#  namespace           = var.namespace
+#  root_domain_name = var.root_domain_name
+#}
 
 
 
