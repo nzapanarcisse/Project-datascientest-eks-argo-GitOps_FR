@@ -1,7 +1,7 @@
 namespace= "fall-project"
 instance_type_bastion= "t2.micro"
 ami_type= "AL2_x86_64"
-instance_type= "fall-project"
+instance_type= "t3a.medium"
 instance_number= 2
 region= "us-east-1"
 profile= "dev"
