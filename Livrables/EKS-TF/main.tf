@@ -120,17 +120,17 @@ module "eks" {
 #  cluster_oidc_issuer_url = module.eks.cluster_oidc_issuer_url
 #}
 
-#module "cert_manager" {
-#  source       = "./modules/cert_manager"
-#  profile = var.profile
-#}
+module "cert_manager" {
+  source       = "./modules/cert_manager"
+  profile = var.profile
+}
 
-#module "ingress" {
-#  source      = "./modules/ingress"
-#  profile = var.profile
-#  namespace           = var.namespace
-#  root_domain_name = var.root_domain_name
-#}
+module "ingress" {
+  source      = "./modules/ingress"
+  profile = var.profile
+  namespace           = var.namespace
+  root_domain_name = var.root_domain_name
+}
 
 
 
