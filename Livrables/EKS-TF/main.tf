@@ -98,12 +98,12 @@ module "eks" {
   eks_admins_iam_role = module.eks.eks_admins_iam_role
 }
 
-#module "argocd" {
-#  source                = "./modules/argocd"
-#  fall-project_repo            = var.fall-project_repo
-#  fall-project_repo_secret_key = var.GIT_SECRET_KEY
-#  profile = var.profile
-#}
+module "argocd" {
+  source                = "./modules/argocd"
+  fall-project_repo            = var.fall-project_repo
+  fall-project_repo_secret_key = var.GIT_SECRET_KEY
+  profile = var.profile
+}
 
 module "prometheus" {
   source      = "./modules/prometheus"
